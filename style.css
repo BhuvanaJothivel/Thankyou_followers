@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('background.webp');
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,55 +28,42 @@ body{
 
 .follow{
     position: absolute;
-    left:28%;
+    left:30%;
     top: 15%;
     font-size: 4em;
-    font-family: 'Permanent Marker', cursive;
-    color: yellow;
+    font-family: 'Kaushan Script', cursive;
+    color: rgba(248, 212, 6, 0.884);
     animation: animatetext 5s linear infinite;
 }
 
 @keyframes animatetext{
-    0%{
-        transform: translateX(0%);
+    0%,100%{
+        transform: scale(1.2);
     }
-    10%{
-        transform: translateX(5%);
+    35%,65%{
+        transform: scale(1);
     }
-    20%{
-        transform: translateX(10%);
-    }
-    30%{
-        transform: translateX(15%);
-    }
-    50%{
-        transform: translateX(20%);
-    }
-    60%{
-        transform: translateX(20%);
-    }
-    70%{
-        transform: translateX(15%);
-    }
-    80%{
-        transform: translateX(10%);
-    }
-    90%{
-        transform: translateX(5%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
+}
+#followImg{
+    width: 25%;
+    height: 35%;
+}
+#followText{
+    position: absolute;
+    font-family: 'Berkshire Swash', cursive;
+    top:7%;
+    left: 25%;
 }
 .main{
     position: absolute;
-    height: auto;
+    height: 30%;
     width: 80%;
     margin:auto auto;
     top: 35%;
-    left: 15%;
+    left: 10%;
     transform: translateY(-50%,-50%);
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .main h1{
@@ -84,24 +72,24 @@ body{
     justify-content: center;
     width: 100%;
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 700;
 }
 
 .main h1 div{
     margin: 0;
     position: relative;
-    height: auto;
-    width: auto;
+    height: 30%;
+    width: 80%;
     height: 65px;
     z-index: -1;
-    color: #f01cb5;
+    color: #fd2a05;
     overflow: hidden;
     text-align: center;
 }
 
 .main h1 div::before{
-    position: absolute;
+    position: relative;
     content: '';
     height: 100%;
     width: 100%;
@@ -121,36 +109,36 @@ body{
     }
     50%{
         left:0;
-        background: rgb(78, 78, 78);
+        background: transparent;
     }
     100%{
         left:100%;
-        background: rgb(78, 78, 78);
+        background: transparent;
     }
 }
 .main h1 div ul{
+    position: relative;
     margin: 0 2%;
     padding: 0;
     width: auto;
-    text-align: left;
-    animation: animate 6s linear infinite;
+    animation: animate 7s linear infinite;
 }
 
 @keyframes animate{
-    0%{
-        transform: translateY(0px);
-    }
     30%{
         transform: translateY(0px);
+    
     }
     40%{
         transform: translateY(-65px);
+ 
     }
+
     65%{
         transform: translateY(-65px);
     }
     75%,100%{
-        transform: translateY(-130px);
+        transform: translateY(-140px);
     }
 }
 .main h1 div ul li{
@@ -158,11 +146,13 @@ body{
     height: 65px;
 }
 .main p{
-    position: relative;
-    font-size: 1.9em;
+    position: absolute;
+    top:110%;
+    left:32%;
+    font-size: 2em;
     font-weight: bold;
-    color: rgb(255, 72, 0);
-    letter-spacing: 5px;
+    color: rgb(238, 255, 0);
+    letter-spacing: 7px;
     margin-left: -2%;
     font-family: 'Architects Daughter', cursive;
 }
